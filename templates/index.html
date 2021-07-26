@@ -1,0 +1,45 @@
+<div>
+  <image src='{{imagepath}}'></image>
+  <p>{{description1}}</p>
+</div>
+<div>
+  <image src='{{image2path}}'>
+    </image>
+    <p>{{description2}}</p>
+</div>
+<div>
+<input type="text" id='search' placeholder='Type to Search Here'>
+<button onclick=search()>Search</button>
+</div>
+<script>
+  function search(){
+  var tag = document.getElementById("search").value;
+  window.location = '/filter/' + tag;
+  }
+</script>
+<style>
+img {
+  padding: 5px;
+  width: 300px;
+}
+body{
+  background-color:blueviolet;
+}
+input[type="file"] {
+  position: absolute;
+  z-index: -1;
+  top: 10px;
+  left: 8px;
+  font-size: 17px;
+  color: blueviolet;
+}
+div {
+  width: 100vw;
+  height: 500px;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+} 
+
+</style>
+
